@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>নিলয়ের হৃৎমোহিনী 🎂</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #1b1b2f, #0f0f1a 60%, #000);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+      padding-bottom: 50px;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #ffb6c1;
+      margin-top: 60px;
+      padding: 0 15px;
+    }
+
+    p {
+      max-width: 800px;
+      margin: 25px auto;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      color: #f2f2f2;
+      padding: 0 15px;
+    }
+
+    .section {
+      margin-top: 80px;
+    }
+
+    /* Floating background bubbles */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(255,192,203,0.1), rgba(0,0,0,0.9));
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 182, 193, 0.3);
+      animation: float 10s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0.3; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+
+    /* Pop-up Sorry/I love you */
+    .popup {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2rem;
+      color: #ff99c8;
+      animation: pop 3s ease-in-out infinite;
+    }
+
+    @keyframes pop {
+      0%, 100% { transform: scale(0.8); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+    }
+
+    /* Couple photos */
+    .couple-photos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 60px 0;
+      padding: 0 15px;
+    }
+
+    .couple-photos img {
+      width: 180px;
+      height: 180px;
+      border-radius: 15px;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(255,182,193,0.4);
+      transition: transform 0.5s;
+    }
+
+    .couple-photos img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 40px rgba(255,192,203,0.7);
+    }
+
+    /* Her glowing photos */
+    .photo-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+      padding: 0 15px;
+    }
+
+    .photo-gallery img {
+      width: 160px;
+      height: 160px;
+      border-radius: 20px;
+      object-fit: cover;
+      opacity: 0;
+      transform: scale(0.9);
+      animation: fadeGlow 16s ease-in-out infinite;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+    }
+
+    .photo-gallery img:nth-child(1) { animation-delay: 0s; }
+    .photo-gallery img:nth-child(2) { animation-delay: 4s; }
+    .photo-gallery img:nth-child(3) { animation-delay: 8s; }
+    .photo-gallery img:nth-child(4) { animation-delay: 12s; }
+
+    @keyframes fadeGlow {
+      0% { opacity: 0; transform: scale(0.9); box-shadow: 0 0 5px rgba(255,255,255,0.1); }
+      20% { opacity: 1; transform: scale(1.02); box-shadow: 0 0 40px rgba(255,182,193,0.6); }
+      50% { opacity: 1; transform: scale(1); box-shadow: 0 0 25px rgba(255,255,255,0.3); }
+      80% { opacity: 0; transform: scale(0.95); }
+      100% { opacity: 0; }
+    }
+
+    .caption {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      color: #ffd6e0;
+      font-family: 'Great Vibes', cursive;
+      padding: 0 10px;
+    }
+
+    .birthday {
+      margin-top: 80px;
+      padding: 0 15px;
+    }
+
+    .birthday h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.6rem;
+      color: #ffb6c1;
+      margin-bottom: 15px;
+    }
+
+    audio { display: none; }
+
+    /* 🔹 Responsive Tweaks for Mobile */
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; margin-top: 40px; }
+      p { font-size: 1rem; }
+      .popup { font-size: 1.6rem; }
+      .couple-photos img, .photo-gallery img { width: 140px; height: 140px; }
+      .caption { font-size: 1.1rem; }
+      .birthday h2 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="background" id="bg"></div>
+
+  <audio autoplay loop>
+    <source src="StillWithYou.mp3" type="audio/mp3" />
+  </audio>
+
+  <h1>নিলয়ের হৃৎমোহিনী 💖</h1>
+
+  <p>
+    I know recently you felt ignored, and you had every reason to.  
+    I was sick, lazy, and buried in my admission exam. But from now on, I promise to do everything possible to give you the effort and attention you deserve.  
+    Love isn’t just emotion — it’s action, care, and presence.  
+    I’ll share everything with you, carry your burdens, and help you through your own admission journey too.  
+    What I did was absolutely wrong — I admit it, and I’ll correct it.  
+    From now, I’ll care about every small detail of you, and love you more than anything.  
+    Our future? We’ll study together, work hard, and build our dreams side by side, just like before.
+  </p>
+
+  <div class="section">
+    <div class="popup">I’m sorry 💔</div>
+    <div class="popup" style="animation-delay:1.5s;">I love you 💞</div>
+  </div>
+
+  <!-- Couple Photos -->
+  <div class="section couple-photos">
+    <img src="couple1.jpg" alt="Couple Photo 1" />
+    <img src="couple2.jpg" alt="Couple Photo 2" />
+    <img src="couple3.jpg" alt="Couple Photo 3" />
+    <img src="couple4.jpg" alt="Couple Photo 4" />
+  </div>
+
+  <!-- Her Glowing Photos -->
+  <div class="section image-section">
+    <div class="photo-gallery">
+      <img src="photo1.jpg" alt="Her Photo 1" />
+      <img src="photo2.jpg" alt="Her Photo 2" />
+      <img src="photo3.jpg" alt="Her Photo 3" />
+      <img src="photo4.jpg" alt="Her Photo 4" />
+    </div>
+    <div class="caption">
+      I can’t stop staring at you.<br />
+      You are the cure of my disease.
+    </div>
+  </div>
+
+  <!-- Birthday Message -->
+  <div class="section birthday">
+    <h2>Happy Birthday, নিলয়ের হৃৎমোহিনী 🎂💗</h2>
+    <p>
+      You’re more than just beautiful — you’re the most precious part of my life.  
+      You bring light, warmth, and meaning to my days.  
+      For your birthday gift, I’ll give you all my hard work, my effort, my heart.  
+      I’ll pamper you, flirt with you, gossip with you, cry and laugh with you —  
+      because every emotion feels right only when it’s with you.
+    </p>
+  </div>
+
+  <script>
+    // Floating bubbles background
+    const bg = document.getElementById('bg');
+    for (let i = 0; i < 25; i++) {
+      const bubble = document.createElement('div');
+      bubble.classList.add('bubble');
+      const size = Math.random() * 8 + 4;
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.left = `${Math.random() * 100}%`;
+      bubble.style.animationDuration = `${10 + Math.random() * 10}s`;
+      bubble.style.animationDelay = `${Math.random() * 5}s`;
+      bg.appendChild(bubble);
+    }
+  </script>
+</body>
+</html>
